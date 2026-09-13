@@ -140,7 +140,7 @@ def my_function(username, **details):
 
 my_function("Tom", age = 25, city = "Dhaka", hobby = "Programming")
 
-#======================================================================
+#=============================================================================
 
 
 #Combining *args and **kwargs
@@ -151,3 +151,30 @@ def all_argument(title, *args, **kwargs):
     print("Keyword arguments: ", kwargs)
 
 all_argument("User Info", "Tom", "Tobias", age = 25, city = "Dhaka")
+
+#================================================================================
+
+#Unpacking Arguments
+
+#Unpacking Lists with *
+
+def positional_argument(a, b, c):
+    return a, b, c
+
+my_list = [2, 5, 10]
+result = positional_argument(*my_list)
+print(result)
+
+
+
+#Unpacking Dictionaries with **
+
+def keyword_argument(name, age):
+    print(f"{name} - {age}")
+
+person = {
+    "name" : "python",
+    "age" : 45
+}
+
+keyword_argument(**person)
